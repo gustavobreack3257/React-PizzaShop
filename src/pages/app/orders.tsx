@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async'
 
+import { Pagination } from '@/components/pagination'
 import { Input } from '@/components/ui/input'
 import {
   Table,
@@ -48,6 +49,7 @@ export function Orders() {
               })}
             </TableBody>
           </Table>
+          <Pagination pageIndex={0} totalCount={105} perPage={10} />
         </div>
       </div>
     </>
