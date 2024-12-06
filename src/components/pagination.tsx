@@ -1,4 +1,5 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import React from 'react'
 
 import { Button } from './ui/button'
 
@@ -25,7 +26,7 @@ export function Pagination({
 
       <div className="flex items-center gap-6 lg:gap-8">
         <div className="†ext-sm font-medium">
-          Pagina {pageIndex + 1} de {pages}
+          Página {pageIndex + 1} de {pages}
         </div>
       </div>
 
@@ -37,7 +38,7 @@ export function Pagination({
           disabled={pageIndex === 0}
         >
           <ChevronLeft className="h-4 w-4" />
-          <span className="sr-only">Primeira pagina</span>
+          <span className="sr-only">Primeira página</span>
         </Button>
 
         <Button
@@ -47,7 +48,7 @@ export function Pagination({
           disabled={pageIndex === 0}
         >
           <ChevronLeft className="h-4 w-4" />
-          <span className="sr-only">Pagina anterior</span>
+          <span className="sr-only">Página anterior</span>
         </Button>
 
         <Button
@@ -57,7 +58,7 @@ export function Pagination({
           disabled={pages <= pageIndex + 1}
         >
           <ChevronRight className="h-4 w-4" />
-          <span className="sr-only">Proxima pagina</span>
+          <span className="sr-only">Próxima página</span>
         </Button>
 
         <Button
