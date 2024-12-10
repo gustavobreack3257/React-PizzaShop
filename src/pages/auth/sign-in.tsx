@@ -1,14 +1,15 @@
 import { useMutation } from '@tanstack/react-query'
+import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useForm } from 'react-hook-form'
 import { Link, useSearchParams } from 'react-router-dom'
 import { toast } from 'sonner'
 import { z } from 'zod'
 
-import { signIn } from '@/api/sign-in'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
+import { signIn } from '../../api/sign-in'
+import { Button } from '../../components/ui/button'
+import { Input } from '../../components/ui/input'
+import { Label } from '../../components/ui/label'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const signInForm = z.object({
@@ -71,7 +72,7 @@ export function SignIn() {
 
           <form className="space-y-4" onSubmit={handleSubmit(handleSignIn)}>
             <div>
-              <Label htmlFor="email">digite seu email</Label>
+              <Label htmlFor="email"> Seu e-mail</Label>
               <Input id="email" type="email" {...register('email')} />
             </div>
 
