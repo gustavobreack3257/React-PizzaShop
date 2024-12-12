@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { Utensils } from 'lucide-react'
+import React from 'react'
 
 import { getDayOrdersAmount } from '@/api/get-day-orders-amount copy 2'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'

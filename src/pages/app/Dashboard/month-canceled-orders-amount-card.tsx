@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { DollarSign } from 'lucide-react'
+import React from 'react'
 
 import { getMonthCanceledOrdersAmount } from '@/api/get-month-canceled-orders-amount'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'

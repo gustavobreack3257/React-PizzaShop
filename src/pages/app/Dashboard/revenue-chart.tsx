@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { subDays } from 'date-fns'
 import { Loader2 } from 'lucide-react'
-import { useMemo, useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import { DateRange } from 'react-day-picker'
 import {
   CartesianGrid,

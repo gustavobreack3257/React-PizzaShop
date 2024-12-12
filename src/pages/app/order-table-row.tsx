@@ -2,7 +2,7 @@ import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { formatDistanceToNow } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import { ArrowRight, Search, X } from 'lucide-react'
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 import { approveOrder } from '@/api/approve-order'
 import { cancelOrder } from '@/api/cancel-order'
