@@ -27,8 +27,8 @@ export function Orders() {
 
   const pageIndex = z.coerce
     .number()
-    .transform((page) => page - 1) // índice da pagina
-    .parse(searchParams.get('page') ?? '1') // índice apresentado ao usuário
+    .transform((page) => page - 1)
+    .parse(searchParams.get('page') ?? '1')
 
   const { data: result, isLoading: isLoadingOrders } = useQuery({
     queryKey: ['orders', pageIndex, orderId, customerName, status],
@@ -48,13 +48,16 @@ export function Orders() {
       return state
     })
   }
+
   return (
     <>
       <Helmet title="Pedidos" />
+
       <div className="flex flex-col gap-4">
         <h1 className="text-3xl font-bold tracking-tight">Pedidos</h1>
         <div className="space-y-2.5">
           <OrderTableFilters />
+
           <div className="rounded-md border">
             <Table>
               <TableHeader>
@@ -78,6 +81,7 @@ export function Orders() {
             </Table>
           </div>
           {isLoadingOrders && <OrderTableSkeleton />}
+
           {result && (
             <Pagination
               onPageChange={handlePaginate}
