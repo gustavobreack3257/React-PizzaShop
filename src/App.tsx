@@ -1,6 +1,7 @@
 import './global.css'
 
 import { QueryClientProvider } from '@tanstack/react-query'
+import React from 'react'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { RouterProvider } from 'react-router-dom'
 import { Toaster } from 'sonner'
